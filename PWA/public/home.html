@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="manifest" href="manifest.json">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+<nav class="navbar">
+    <a href="#" id="navbar-collapse"></a>
+    <div class="bigNavbar">
+        <a class="navLink roomNavBar">Rooms</a>
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Logout</a>
+    </div>
+    <div class="hidden navbarPopup">
+        <a class="navLink roomNavBar">Rooms</a>
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Logout</a>
+        <a href="#" class="close">X</a>
+    </div>
+</nav>
+<main>
+    <div class="deletePopup hidden">
+        <p>Are you sure you want to delete <b></b> ?</p>
+        <a href="#" class="button">Continue</a>
+        <a href="#" class="button">Cancel</a>
+    </div>
+    <div class="offlinePopup hidden">
+        <p>No internet connection</p>
+    </div>
+    <h1>My plants</h1>
+    <div>
+        <a href="#" class="addButton">+</a>
+        <a href="#" class="addButton" id="refresh">Refresh</a>
+    </div>
+    <div id="plantList">
+        <div class="plant">
+            <div class="image">
+                <img src="assets/media/images/testimg.jpg" alt="picture of plantName">
+            </div>
+            <div class="plantInfo" dataId="0">
+                <p>Needs water in <span>2 hours</span></p>
+                <a class="plantButtons" href="#">Details</a>
+                <a class="plantButtons" href="#">Water</a>
+                <a class="plantButtons" href="#">Delete</a>
+            </div>
+        </div>
+        <div class="plant">
+            <div class="image">
+                <img src="assets/media/images/testimg.jpg" alt="picture of plantName">
+            </div>
+            <div class="plantInfo" dataId="0">
+                <p>Needs water in <span>2 hours</span></p>
+                <a class="plantButtons" href="#">Details</a>
+                <a class="plantButtons" href="#">Water</a>
+                <a class="plantButtons" href="#">Delete</a>
+            </div>
+        </div>
+        <div class="plant" dataId="0">
+            <div class="image">
+                <img src="assets/media/images/testimg.jpg" alt="picture of plantName">
+            </div>
+            <div class="plantInfo" dataId="0">
+                <p>Needs water at <span>18:00</span></p>
+                <a class="plantButtons" href="#">Details</a>
+                <a class="plantButtons" href="#">Water</a>
+                <a class="plantButtons" href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="assets/js/home.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/init.js"></script>
+</body>
+</html>

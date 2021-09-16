@@ -1,0 +1,25 @@
+$outer-border-color: #965D35
+$inner-border-color: white
+
+main
+  display: flex
+  align-items: center
+  flex-flow: column
+
+
+input
+  border-radius: 5vh
+
+
+.albums
+  border: 5px $outer-border-color solid
+  max-height: 75vh
+  overflow: auto
+
+  .album
+    border: 3px $inner-border-color
+
+    img
+      width: 30%
+
+

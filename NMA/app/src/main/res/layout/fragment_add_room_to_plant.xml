@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="addRoomToPlantViewModel"
+        type="be.howest.plantcare.screens.addPlant.AddRoomToPlantViewModel" />
+    <variable
+        name="addRoomToPlantAdapter"
+        type="be.howest.plantcare.screens.addPlant.AddRoomToPlantAdapter" />
+</data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MainColor_dark"
+        android:onClick="hideKeyboard"
+        tools:context=".addPlant.AddRoomToPlantFragment">
+
+        <TextView
+            android:id="@+id/textView_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rooms"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/labels"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView_rooms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_rooms"
+            android:layout_width="341dp"
+            android:layout_height="539dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:onClick="@{() -> addRoomToPlantViewModel.onAdd()}"
+            android:text="@string/add_plant"
+            android:visibility="gone"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

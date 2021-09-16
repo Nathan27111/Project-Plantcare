@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="index_buttons">2dp</dimen>
+    <dimen name="Title">24sp</dimen>
+    <dimen name="symbols"> 20sp</dimen>
+    <dimen name="add_plant_textviewmargin">25dp</dimen>
+    <dimen name="labels">20sp </dimen>
+    <dimen name="normal">14sp</dimen>
+</resources>

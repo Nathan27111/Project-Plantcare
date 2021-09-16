@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="plantListViewModel"
+            type="be.howest.plantcare.screens.plantlist.PlantListViewModel" />
+
+        <variable
+            name="plantListAdapter"
+            type="be.howest.plantcare.screens.plantlist.PlantListAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MainColor_dark"
+        tools:context=".plantlist.PlantListFragment">
+
+        <TextView
+            android:id="@+id/my_plants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_plants"
+            android:textColor="@color/white"
+            android:textSize="@dimen/Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/round_button"
+            android:text="@string/refresh"
+            android:onClick="@{() -> plantListViewModel.refreshClick()}"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toTopOf="@+id/plantlist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_plants"
+            app:layout_constraintVertical_bias="0.197" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/plantlist"
+            android:layout_width="413dp"
+            android:layout_height="371dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_plants"
+            app:layout_constraintVertical_bias="0.609">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

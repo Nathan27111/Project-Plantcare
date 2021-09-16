@@ -1,0 +1,23 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+input {
+  border-radius: 5vh;
+}
+
+.albums {
+  border: 5px #965D35 solid;
+  max-height: 75vh;
+  overflow: auto;
+}
+.albums .album {
+  border: 3px white;
+}
+.albums .album img {
+  width: 30%;
+}
+
+/*# sourceMappingURL=album.css.map */

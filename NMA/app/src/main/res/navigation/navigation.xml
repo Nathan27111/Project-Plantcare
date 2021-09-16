@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="be.howest.plantcare.screens.start.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/startFragment"
+             />
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantListFragment"
+        android:name="be.howest.plantcare.screens.plantlist.PlantListFragment"
+        android:label="Your plants"
+        tools:layout="@layout/fragment_plant_list" >
+        <action
+            android:id="@+id/action_plantListFragment_to_addPlantFragment"
+            app:destination="@id/addPlantFragment"
+            app:popUpTo="@id/plantListFragment" />
+        <action
+            android:id="@+id/action_plantListFragment_to_plantDetailFragment"
+            app:destination="@id/plantDetailFragment"
+            app:popUpTo="@id/plantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPlantFragment"
+        android:name="be.howest.plantcare.screens.addPlant.AddPlantFragment"
+        android:label="fragment_add_plant"
+        tools:layout="@layout/fragment_add_plant" >
+        <action
+            android:id="@+id/action_addPlantFragment_to_addRoomToPlantFragment"
+            app:destination="@id/addRoomToPlantFragment"
+            app:popUpTo="@id/plantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRoomToPlantFragment"
+        android:name="be.howest.plantcare.screens.addPlant.AddRoomToPlantFragment"
+        android:label="Add your plant to a room"
+        tools:layout="@layout/fragment_add_room_to_plant" >
+        <argument
+            android:name="plantDescription"
+            app:argType="string" />
+        <argument
+            android:name="isBlooming"
+            app:argType="boolean" />
+        <argument
+            android:name="water"
+            app:argType="integer" />
+        <argument
+            android:name="flowers"
+            app:argType="integer" />
+        <argument
+            android:name="height"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addRoomToPlantFragment_to_plantListFragment"
+            app:destination="@id/plantListFragment"
+            app:popUpTo="@id/plantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRoomFragment"
+        android:name="be.howest.plantcare.screens.addRoom.AddRoomFragment"
+        android:label="Add a new room" >
+        <action
+            android:id="@+id/action_addRoomFragment_to_plantListFragment"
+            app:destination="@id/plantListFragment"
+            app:popUpTo="@id/plantListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="be.howest.plantcare.screens.registration.RegisterFragment"
+        android:label="Register your account" >
+        <action
+            android:id="@+id/action_registerFragment_to_plantListFragment"
+            app:destination="@id/plantListFragment"
+            app:popUpTo="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="be.howest.plantcare.screens.registration.LoginFragment"
+        android:label="Login to Plantcare"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_plantListFragment"
+            app:destination="@id/plantListFragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantDetailFragment"
+        android:name="be.howest.plantcare.screens.plantDetail.PlantDetailFragment"
+        android:label="fragment_plant_list" >
+        <argument
+            android:name="plantId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_plantDetailFragment_to_changeRoomFragment"
+            app:destination="@id/changeRoomFragment" />
+        <action
+            android:id="@+id/action_plantDetailFragment_to_plantListFragment"
+            app:destination="@id/plantListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeRoomFragment"
+        android:name="be.howest.plantcare.screens.changeRoom.ChangeRoomFragment"
+        android:label="fragment_change_room">
+        <argument
+            android:name="plantId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_changeRoomFragment_to_plantDetailFragment"
+            app:destination="@id/plantDetailFragment" />
+    </fragment>
+</navigation>

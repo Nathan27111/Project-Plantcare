@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="manifest" href="manifest.json">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Login to Plantcare</title>
+</head>
+<body>
+<main>
+    <form method="post" enctype="multipart/form-data">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login" id="login">
+    </form>
+</main>
+<p class="errors"></p>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/init.js"></script>
+</body>
+</html>

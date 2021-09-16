@@ -1,0 +1,688 @@
+openapi: "3.0.0"
+info:
+  description: "This is the API spec for the PlantCare application. You can find all the API calls that are
+  available right here."
+  version: "0.5"
+  title: "Plantcare Project"
+servers:
+  - url: http://plantcare.local/api
+    description: Laravel API (local)
+tags:
+  - name: "User"
+    description: "API calls that has to do with users"
+  - name: "Plant"
+    description: "API calls that have to do with plants"
+  - name: "Room"
+    description: "API calls that have to do with rooms"
+  - name: "Picture"
+    description: "API calls that have to do with pictures"
+paths:
+  /register:
+    post:
+      description: "Register a new user"
+      tags:
+      - "User"
+      operationId: register
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                  example: "Nathan"
+                last_name:
+                  type: string
+                  example: "Devel"
+                email:
+                  type: string
+                  example: "nathan.devel@student.howest.be"
+                password:
+                  type: string
+                  example: "admin123"
+      responses:
+        '201':
+          description: "Created"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "User signed up"
+                  user:
+                    type: object
+                    $ref: "#/components/schemas/User"
+        '400':
+          description: "Bad Request"
+  /login:
+    post:
+      description: "Login a user"
+      tags:
+      - "User"
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "nathan.devel@student.howest.be"
+                password:
+                  type: string
+                  example: "admin123"
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    example: "sfhisdgvdshfjdslh.skghdlfguhdsfgefzgefhjkvfdhvfhjevhjvhjvfzjhk.dkgjhsghfsghgfdfg"
+                  token_type:
+                    type: string
+                    example: "bearer"
+                  expires_in:
+                    type: integer
+                    example: 3600
+                  user:
+                    type: object
+                    $ref: "#/components/schemas/User"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+        '422':
+          description: "Unprocessable Entity"
+  /user:
+    get:
+      description: "Get the currently logged in user"
+      tags:
+      - "User"
+      operationId: user
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+  /logout:
+    post:
+      description: "Logout the current user"
+      tags:
+      - "User"
+      operationId: logout
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "User logged out"
+  /rooms:
+    get:
+      description: "Get all rooms"
+      tags:
+      - "Room"
+      operationId: getAllRooms
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Room"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+    post:
+      description: "Add a new room"
+      tags:
+      - "Room"
+      operationId: addRoom
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  example: 1
+                room_description:
+                  type: string
+                  example: "Bathroom"
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Room"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+  /rooms/{room_id}:
+    get:
+      description: "Get the info of a specific room"
+      parameters:
+        - in: path
+          name: room_id
+          schema:
+            type: integer
+          required: true
+          description: ID of the room to get
+      tags:
+      - "Room"
+      operationId: findRoom
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Room"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Unable to create room"
+    put:
+      description: "Change the details of a room"
+      parameters:
+        - in: path
+          name: room_id
+          schema:
+            type: integer
+          required: true
+          description: "ID of the room to change"
+      tags:
+      - "Room"
+      operationId: updateRoom
+      security: 
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  $ref: "#/components/schemas/user_id"
+                room_description:
+                  type: string
+                  example: "Bathroom"
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Room"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+    delete:
+      description: "Delete a room"
+      tags:
+      - "Room"
+      operationId: deleteRoom
+      parameters: 
+        - in: path
+          name: room_id
+          schema:
+           type: integer
+          required: true
+          description: "ID of the room to change"
+      responses:
+        '200':
+          description: "OK"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+  /plants:
+    get:
+      description: "Get all plants"
+      tags:
+      - "Plant"
+      operationId: getAllPlants
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Plant"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+    post:
+      description: "Add a new plant"
+      tags:
+      - "Plant"
+      operationId: addPlant
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                room_id:
+                  $ref: "#/components/schemas/room_id"
+                needs_water:
+                  type: integer
+                  example: 1
+                last_watered_at:
+                  type: string
+                  format: date-time
+                  example: "2021-01-01 00:00:00"
+                plant_description:
+                  type: string
+                  example: "A bouquet of roses"
+                flowers:
+                  type: integer
+                  example: 1
+                height:
+                  type: integer
+                  example: 30
+                is_blooming:
+                  type: boolean
+                  example: False
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Plant"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+  /plants/{plant_id}:
+    get:
+      description: "Get the info of a specific room"
+      parameters:
+        - in: path
+          name: plant_id
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant to get
+      tags:
+      - "Plant"
+      operationId: findPlant
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Plant"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+    put:
+      description: "Change the details of a plant"
+      parameters:
+        - in: path
+          name: plant_id
+          schema:
+            type: integer
+          required: true
+          description: "ID of the plant to change"
+      tags:
+      - "Plant"
+      operationId: updatePlant
+      security: 
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                room_id:
+                  $ref: "#/components/schemas/room_id"
+                needs_water:
+                  type: integer
+                  example: 1
+                last_watered_at:
+                  type: string
+                  format: date-time
+                  example: "2021-01-01 00:00:00"
+                plant_description:
+                  type: string
+                  example: "A bouquet of roses"
+                flowers:
+                  type: integer
+                  example: 1
+                height:
+                  type: integer
+                  example: 30
+                is_blooming:
+                  type: boolean
+                  example: False
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Plant"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Unable to create plant"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+    delete:
+      description: "Delete a plant"
+      tags:
+      - "Plant"
+      operationId: deletePlant
+      parameters: 
+        - in: path
+          name: plant_id
+          schema:
+           type: integer
+          required: true
+          description: "ID of the plant to change"
+      responses:
+        '200':
+          description: "OK"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+  /pictures:
+    post:
+      description: "Add a new picture"
+      tags:
+      - "Picture"
+      operationId: addPicture
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                plant_id:
+                  type: integer
+                  example: 1
+                photo:
+                  type: string
+                  example: "Verylongname.png"
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/Picture"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+  /picture/{plant_id}:
+    get:
+      description: "Get the pictures of a specific plant"
+      parameters:
+        - in: path
+          name: plant_id
+          schema:
+            type: integer
+          required: true
+          description: ID of the plant to get all pictures from
+      tags:
+      - "Picture"
+      operationId: findPicture
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                $ref: "#/components/schemas/Picture"
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Unauthorized"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    user_id:
+      type: integer
+      example: 1
+    room_id:
+      type: integer
+      example: 1
+    plant_id:
+      type: integer
+      example: 1
+    picture_id:
+      type: integer
+      example: 1
+    User:
+      type: object
+      properties:
+        user_id:
+          $ref: "#/components/schemas/user_id"
+        first_name:
+          type: string
+          example: "Nathan"
+        last_name:
+          type: string
+          example: "Devel"
+        email:
+          type: string
+          example: "nathan.devel@student.howest.be"
+        password:
+          type: string
+          example: "admin123"
+    Plant:
+      type: object
+      properties:
+        plant_id:
+          $ref: "#/components/schemas/plant_id"
+        room_id:
+          $ref: "#/components/schemas/room_id"
+        needs_water:
+          type: integer
+          example: 1
+        last_watered_at:
+          type: string
+          format: date-time
+          example: "2021-01-01 00:00:00"
+        plant_description:
+          type: string
+          example: "A bouquet of roses"
+        flowers:
+          type: integer
+          example: 1
+        height:
+          type: integer
+          example: 30
+        is_blooming:
+          type: boolean
+          example: False
+    Room:
+      type: object
+      properties:
+        room_id:
+          $ref: "#/components/schemas/room_id"
+        user_id:
+          $ref: "#/components/schemas/user_id"
+        room_description:
+          type: string
+          example: "Living room"
+    Picture:
+      type: object
+      properties:
+        picture_id:
+          $ref: "#/components/schemas/picture_id"
+        plant_id:
+          $ref: "#/components/schemas/plant_id"
+        picture:
+          type: string
+          example: "/public/images/plant.png"
+        taken_at:
+          type: string
+          format: date-time
+          example: "2021-01-01 00:00:00"
+          
+          
+          
+          
+          
+          
+          
+          
+          

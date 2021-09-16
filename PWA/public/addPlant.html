@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/addPlant.css">
+    <link rel="manifest" href="manifest.json">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Add a new plant</title>
+</head>
+<body>
+<nav class="navbar">
+    <a href="#" id="navbar-collapse"></a>
+    <div class="bigNavbar">
+        <a class="navLink">Rooms</a>
+        <a class="navLink">Homepage</a>
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Logout</a>
+    </div>
+    <div class="hidden navbarPopup">
+        <a class="navLink">Rooms</a>
+        <a class="navLink">Homepage</a>
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Logout</a>
+        <a href="#" class="close">X</a>
+    </div>
+</nav>
+<main>
+    <h1>Add a plant</h1>
+    <div class="formDiv">
+        <form method="post">
+            <label for="plantDescription">Description:</label>
+            <input type="text" id="plantDescription" placeholder="Place description here..." required>
+            <label for="rooms">Room:</label>
+            <select id="rooms">
+            </select>
+            <label for="blooming">Blooming:</label>
+            <select id="blooming">
+                <option id="0" selected>No</option>
+                <option id="1">Yes</option>
+            </select>
+            <label for="needsWater">Needs water in X days:</label>
+            <input type="number" id="needsWater" min="0" value="0">
+            <label for="flowers">Amount of flowers:</label>
+            <input type="number" id="flowers" min="0" value="0">
+            <label for="height">Height:</label>
+            <input type="number" id="height" min="0" value="0">
+            <input type="submit" value="Add plant">
+        </form>
+    </div>
+
+
+</main>
+<script src="assets/js/addPlant.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/init.js"></script>
+</body>
+</html>

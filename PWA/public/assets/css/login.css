@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  body main {
+    margin-top: 25%;
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  border: white solid 0.5rem;
+  vertical-align: center;
+  margin-top: 10%;
+}
+
+/*# sourceMappingURL=login.css.map */

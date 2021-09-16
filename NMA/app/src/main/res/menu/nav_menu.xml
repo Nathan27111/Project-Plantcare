@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addPlantFragment"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="@string/add_plant"/>
+    <item
+        android:id="@+id/addRoomFragment"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="@string/add_room"/>
+    <item
+        android:id="@+id/plantListFragment"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="@string/my_plants"/>
+</menu>

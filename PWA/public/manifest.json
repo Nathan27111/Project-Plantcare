@@ -1,0 +1,41 @@
+{
+  "name": "Plantcare",
+  "short_name": "pcare",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/assets/media/images/icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },{
+      "src": "/assets/media/images/icon_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },{
+      "src": "/assets/media/images/icon_72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },{
+      "src": "/assets/media/images/icon_1024x1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },{
+      "src": "/assets/media/images/icon_96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },{
+      "src": "/assets/media/images/icon_144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },{
+      "src": "/assets/media/images/icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+
+  ]
+}

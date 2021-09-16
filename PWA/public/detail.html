@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/detail.css">
+    <link rel="manifest" href="manifest.json">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Details</title>
+</head>
+<body>
+<nav class="navbar">
+    <a href="#" id="navbar-collapse"></a>
+    <div class="bigNavbar">
+        <a class="navLink">Rooms</a>
+        <a class="navLink">Homepage</a>
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Logout</a>
+    </div>
+    <div class="hidden navbarPopup">
+        <a class="navLink">Rooms</a>
+        <a class="navLink">Homepage</a>
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Logout</a>
+        <a href="#" class="close">X</a>
+    </div>
+</nav>
+<main>
+    <div id="plantDetails">
+        <img src="assets/media/images/testimg.jpg" alt="photo of your plant">
+        <div>
+            <p>Description:</p><span id="plantDescription">Dit is een plant die zeer mooi is etc.</span>
+            <p>Room:</p><span id="plantRoom">Living room</span>
+            <p>Flowers:</p> <span id="plantFlowers">0</span>
+            <p>Height:</p> <span id="plantHeight">120</span>
+            <p>Blooming:</p><span id="plantIsBlooming">yes</span>
+        </div>
+    </div>
+    <div id="plantDetails-change" class="hidden">
+        <img src="assets/media/images/testimg.jpg" alt="photo of your plant">
+        <div>
+            <form method="post">
+                <label for="plantDescription_change">Description:</label>
+                <input type="text" required id="plantDescription_change" name="plant_description">
+                <label for="plantRoom_change">Room:</label>
+                <select id="plantRoom_change" name="room_id">
+                </select>
+                <label for="plantFlowers_change">Flowers:</label>
+                <input type="number" id="plantFlowers_change" name="flowers" value="0" min="0">
+                <label for="plantHeight_change">Height: (in cm)</label>
+                <input type="number" id="plantHeight_change" name="height" value="0" min="0">
+                <label for="plantIsBlooming_change">Blooming:</label>
+                <select id="plantIsBlooming_change" name="is_blooming">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+    <a href="#" class="button">Change details</a>
+    <a href="#" class="button hidden">Cancel</a>
+</main>
+<script src="assets/js/detail.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/init.js"></script>
+</body>
+</html>

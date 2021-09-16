@@ -1,0 +1,138 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  background-color: #4A6F28;
+}
+body * {
+  color: white;
+  font-family: "Dancing Script", monospace;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    border-bottom: none;
+  }
+  .navbar #navbar-collapse {
+    width: 10%;
+    background-image: url("../media/images/navbar.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .navbar .bigNavbar {
+    display: none;
+  }
+}
+.navbarPopup {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  width: 40vh;
+  height: 50vh;
+  background-color: rgba(222, 184, 135, 0.8);
+}
+.navbarPopup .navLink {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: white 0.5rem solid;
+  margin-bottom: 6.5vh;
+  margin-top: 5.5vh;
+  font-size: 2rem;
+}
+.navbarPopup * {
+  display: block;
+  text-align: center;
+}
+.navbarPopup .close {
+  background-color: saddlebrown;
+  top: 0;
+  right: -1vh;
+  position: absolute;
+  width: 3vh;
+  padding: 5px;
+  border: 1px saddlebrown solid;
+  border-radius: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  border-bottom: white 0.5rem solid;
+  height: 5vh;
+}
+nav * {
+  display: inline;
+}
+nav .navLink {
+  border-left: white 0.5rem solid;
+  border-right: white 0.5rem solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Dancing Script", monospace;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Dancing Script", monospace;
+}
+
+p {
+  font-size: 2rem;
+  font-family: "Dancing Script", monospace;
+}
+
+.button {
+  font-size: 2rem;
+  text-decoration: none;
+  border: white 0.5rem dashed;
+  border-radius: 15px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: darkgreen;
+  color: black;
+}
+
+label {
+  color: white;
+  font-size: 5vh;
+}
+
+input, select {
+  font-size: 2.5vh;
+  color: #965D35;
+  display: block;
+  margin-bottom: 5%;
+}
+
+input[type=file] {
+  color: white;
+}
+
+option {
+  color: #965D35;
+}
+
+.offline {
+  background-color: darkred;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="plantDetailViewModel"
+            type="be.howest.plantcare.screens.plantDetail.PlantDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MainColor_dark"
+        android:onClick="hideKeyboard"
+        tools:context=".plantDetail.PlantDetailFragment">
+
+        <EditText
+            android:id="@+id/textView_plant_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:inputType="text"
+            android:text="@string/description"
+            android:textColor="@color/white"
+            android:textSize="@dimen/Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/Room"
+            android:textColor="@color/white"
+            android:textSize="@dimen/labels"
+            app:layout_constraintEnd_toStartOf="@+id/textView_room"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_plant_description" />
+
+        <TextView
+            android:id="@+id/label_needs_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="@string/water_in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/labels"
+            app:layout_constraintEnd_toStartOf="@+id/textView_water"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_room" />
+
+        <TextView
+            android:id="@+id/label_flowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="132dp"
+            android:text="@string/flowers"
+            android:textColor="@color/white"
+            android:textSize="@dimen/labels"
+            app:layout_constraintEnd_toStartOf="@+id/textView_flowers"
+            app:layout_constraintHorizontal_bias="0.475"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_needs_water" />
+
+        <TextView
+            android:id="@+id/label_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height"
+            android:textColor="@color/white"
+            android:textSize="@dimen/labels"
+            app:layout_constraintBottom_toTopOf="@+id/radioButton_is_blooming"
+            app:layout_constraintEnd_toStartOf="@+id/textView_height"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_flowers"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <RadioButton
+            android:id="@+id/radioButton_is_blooming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> plantDetailViewModel.onIsBloomingClick()}"
+            android:text="@string/is_blooming"
+            android:textColor="@color/white"
+            android:textSize="@dimen/labels"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <TextView
+            android:id="@+id/textView_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="84dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:onClick="@{() -> plantDetailViewModel.onRoomClick()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_plant_description" />
+
+        <TextView
+            android:id="@+id/textView_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="84dp"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_room" />
+
+        <EditText
+            android:id="@+id/textView_flowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="132dp"
+            android:layout_marginEnd="84dp"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/label_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_water"
+            app:layout_constraintVertical_bias="0.00999999" />
+
+        <EditText
+            android:id="@+id/textView_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/radioButton_is_blooming"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_flowers"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <Button
+            android:id="@+id/button_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:onClick="@{() -> plantDetailViewModel.doneButtonClick()}"
+            android:text="@string/done"
+            android:textSize="@dimen/normal"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton_is_blooming" />
+
+        <Button
+            android:id="@+id/button_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:onClick="@{() -> plantDetailViewModel.deletePlant()}"
+            android:text="@string/confirm"
+            android:textSize="@dimen/normal"
+            android:visibility="gone"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.811"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButton_is_blooming" />
+
+        <Button
+            android:id="@+id/button_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:onClick="@{() -> plantDetailViewModel.onWaterPlant()}"
+            android:text="@string/water"
+            android:textSize="@dimen/normal"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toTopOf="@+id/label_flowers"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_needs_water" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:onClick="@{() -> plantDetailViewModel.onDeleteClick()}"
+            android:text="@string/delete"
+            android:textSize="@dimen/normal"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toTopOf="@+id/label_flowers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_water"
+            app:layout_constraintTop_toBottomOf="@+id/label_needs_water" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

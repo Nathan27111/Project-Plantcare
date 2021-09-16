@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="startViewModel"
+        type="be.howest.plantcare.screens.start.StartViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MainColor_dark"
+        tools:context=".start.StartFragment">
+
+        <TextView
+            android:id="@+id/textview_plantcare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/Title"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/Title"
+            app:layout_constraintBottom_toTopOf="@+id/button_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="139dp"
+            android:layout_height="51dp"
+            android:background="@drawable/round_button"
+            android:bottomLeftRadius="10dp"
+            android:bottomRightRadius="10dp"
+            android:text="@string/login"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"
+            android:onClick="@{() -> startViewModel.onLogin()}"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_register"
+            app:layout_constraintHorizontal_bias="0.176"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="139dp"
+            android:layout_height="51dp"
+            android:background="@drawable/round_button"
+            android:bottomLeftRadius="10dp"
+            android:bottomRightRadius="10dp"
+            android:text="@string/register"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"
+            android:onClick="@{() -> startViewModel.onRegister()}"
+            app:backgroundTint="@color/SecondColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

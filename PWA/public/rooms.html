@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/rooms.css">
+    <link rel="manifest" href="manifest.json">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <a href="#" id="navbar-collapse"></a>
+    <div class="bigNavbar">
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Homepage</a>
+        <a class="navLink">Logout</a>
+    </div>
+    <div class="hidden navbarPopup">
+        <a class="navLink">Plant album</a>
+        <a class="navLink">Homepage</a>
+        <a class="navLink">Logout</a>
+        <a href="#" class="close">X</a>
+    </div>
+</nav>
+<main>
+    <h1>Your rooms</h1>
+    <ul id="rooms">
+    </ul>
+    <h1>Add a new room</h1>
+    <form method="post">
+        <label for="roomDescription">Description:</label>
+        <input type="text" id="roomDescription" name="room_description">
+        <input type="submit" value="Add room" id="addRoom">
+    </form>
+</main>
+<script src="assets/js/rooms.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/config.js"></script>
+</body>
+</html>

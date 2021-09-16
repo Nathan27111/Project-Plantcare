@@ -1,0 +1,64 @@
+html, body {
+  margin: 0;
+  height: 60vh;
+}
+
+body {
+  text-align: center;
+  background-color: #4A6F28;
+}
+body * {
+  color: white;
+}
+
+main {
+  padding-top: 40vh;
+}
+
+.buttons {
+  padding-top: 10vh;
+  margin-bottom: 15px;
+}
+
+.buttons a {
+  display: block;
+  margin-bottom: 10vh;
+}
+
+#border-div {
+  border: white 0.5rem solid;
+  margin-top: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Dancing Script", monospace;
+  margin-top: -2.5rem;
+  background-color: #4A6F28;
+  border: white 0.5rem solid;
+}
+
+p {
+  font-size: 2rem;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: none;
+  border: white 0.5rem dashed;
+  border-radius: 15px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+a:hover {
+  background-color: darkgreen;
+  color: black;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d8f90abc-3246-488b-a4a0-194b7441cbd5" name="Default Changelist" comment="Modified addPlant so a record is also added in the plantsUser table.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modules/Plants/PlantService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modules/Plants/PlantService.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1pnWs2xhpBCOuHtUGJ2SfJrmHnc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../documentation" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nathan\OneDrive - Hogeschool West-Vlaanderen\Semester 4\Web &amp; Mobile technology\PlantCare Project\laravel\public\images" />
+      <recent name="C:\Users\Nathan\OneDrive - Hogeschool West-Vlaanderen\Semester 4\Web &amp; Mobile technology\PlantCare Project\laravel\app\Modules\Pictures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nathan\OneDrive - Hogeschool West-Vlaanderen\Semester 4\Web &amp; Mobile technology\PlantCare Project\laravel\app\Modules\Services" />
+      <recent name="C:\Users\Nathan\OneDrive - Hogeschool West-Vlaanderen\Semester 4\Web &amp; Mobile technology\PlantCare Project\laravel\app\Modules" />
+      <recent name="C:\Users\Nathan\OneDrive - Hogeschool West-Vlaanderen\Semester 4\Web &amp; Mobile technology\PlantCare Project\laravel\app\Modules\Core" />
+      <recent name="C:\Users\Nathan\OneDrive - Hogeschool West-Vlaanderen\Semester 4\Web &amp; Mobile technology\PlantCare Project\laravel\Core" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8f90abc-3246-488b-a4a0-194b7441cbd5" name="Default Changelist" comment="" />
+      <created>1615819537942</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615819537942</updated>
+      <workItem from="1615819539523" duration="80000" />
+      <workItem from="1615879741404" duration="471000" />
+      <workItem from="1616083554796" duration="3794000" />
+      <workItem from="1616094895145" duration="2270000" />
+      <workItem from="1616142247501" duration="5231000" />
+      <workItem from="1616162629501" duration="6501000" />
+      <workItem from="1616229852717" duration="4801000" />
+      <workItem from="1616234734888" duration="6588000" />
+      <workItem from="1616331745314" duration="86000" />
+      <workItem from="1616340427313" duration="17000" />
+      <workItem from="1620644768424" duration="3124000" />
+      <workItem from="1620716716116" duration="89000" />
+      <workItem from="1620725251070" duration="7198000" />
+      <workItem from="1620734913943" duration="5955000" />
+      <workItem from="1620741563525" duration="276000" />
+      <workItem from="1620741857989" duration="496000" />
+      <workItem from="1620742776028" duration="1311000" />
+      <workItem from="1620978889294" duration="16813000" />
+      <workItem from="1621065924547" duration="15909000" />
+      <workItem from="1621160577359" duration="12407000" />
+      <workItem from="1621235540667" duration="1149000" />
+      <workItem from="1621236979519" duration="8066000" />
+      <workItem from="1621322125912" duration="2033000" />
+      <workItem from="1621514613657" duration="42000" />
+      <workItem from="1621580921020" duration="3520000" />
+      <workItem from="1621846074427" duration="10582000" />
+      <workItem from="1621881236587" duration="2173000" />
+      <workItem from="1621883817990" duration="599000" />
+      <workItem from="1627982366802" duration="3172000" />
+      <workItem from="1627998505129" duration="605000" />
+      <workItem from="1628063937276" duration="86000" />
+      <workItem from="1628064795700" duration="620000" />
+      <workItem from="1628070289630" duration="1297000" />
+      <workItem from="1628149478375" duration="1003000" />
+      <workItem from="1628166542338" duration="2879000" />
+      <workItem from="1628247777126" duration="7000" />
+      <workItem from="1628324907226" duration="8856000" />
+      <workItem from="1628420526747" duration="3387000" />
+      <workItem from="1628513781548" duration="195000" />
+      <workItem from="1628585528269" duration="5692000" />
+      <workItem from="1628754147699" duration="3700000" />
+      <workItem from="1628850686374" duration="11000" />
+      <workItem from="1628859484014" duration="471000" />
+      <workItem from="1628859989218" duration="3000" />
+      <workItem from="1628860174922" duration="587000" />
+      <workItem from="1628872609312" duration="39000" />
+      <workItem from="1628947214015" duration="137000" />
+      <workItem from="1629113884992" duration="37000" />
+      <workItem from="1629113989190" duration="49000" />
+    </task>
+    <task id="LOCAL-00002" summary="Created a few Factories, but will complete those later.">
+      <created>1616166831082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616166831082</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added service class for Model User.">
+      <created>1616169081521</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616169081521</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Factories and Seeder.">
+      <created>1616230635545</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616230635545</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Modfied Seeders and some Migrations. Changed Seeders to not use Factories yet.">
+      <created>1616234259903</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616234259903</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added a route to /rooms, which returns all rooms in the database.">
+      <created>1616236652414</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616236652414</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added a post route to /rooms to allow rooms to be added to the database.">
+      <created>1616251396563</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616251396563</updated>
+    </task>
+    <task id="LOCAL-00008" summary="The find method in the service works as intended.">
+      <created>1616251669858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616251669858</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Modified the RoomService and added a Service class, which should be used as a base class for all services.">
+      <created>1616252512376</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616252512376</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Finished an endpoint to request a specific room from the API.">
+      <created>1616253011428</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616253011428</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Modified migration files: changed bigIncrement to the more readable id.">
+      <created>1620729133809</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620729133810</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Further modified migration files.&#10;Added working factories. Seeders now seed data using factories.">
+      <created>1620734507557</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620734507557</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed an issue where the primary key is not correct due to naming conventions.&#10;Added put request for /rooms/{id}.">
+      <created>1620740964810</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620740964811</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added /rooms/{id} delete endpoint.">
+      <created>1620743139955</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1620743139955</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added JWT to the project. Now to test it.">
+      <created>1620982216201</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1620982216201</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed an error that caused registering and logging in to not work properly.">
+      <created>1620985567488</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620985567488</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changed the JWT controller to Usercontroller and removed the /auth from register and login to be more in line with other endpoints.">
+      <created>1620986883758</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620986883758</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added authentication checks to the methods in RoomService.&#10;Added a method that checks authentication and a method that returns &quot;Unauthorized&quot; if the check fails in the core Service file.">
+      <created>1620995258662</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1620995258662</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added Plant endpoints.">
+      <created>1621002605905</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1621002605905</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added routes for Pictures.">
+      <created>1621078879491</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621078879491</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactored endpoints.">
+      <created>1621094904008</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621094904008</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added some thing for testing with multilingual values, but none of the columns in my database make much sense for translating. Everything is personal data that could make less sense when translated or numbers.">
+      <created>1621176166150</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1621176166150</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added locale/nl string values.">
+      <created>1621180331921</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621180331921</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added prefixes for english and dutch to the endpoints. Endpoints are written in their respective language.">
+      <created>1621180727078</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621180727078</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added links for the images directory.">
+      <created>1621236794520</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621236794520</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Changed multilingual implementation to use a queryString param in the api call rather then changing the entire url.">
+      <created>1621583244109</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1621583244109</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed some errors.">
+      <created>1621848361042</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1621848361042</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Removed the validation on the plants as a quick solution due to errors">
+      <created>1621879730128</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1621879730128</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Final commit.">
+      <created>1621883566762</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1621883566762</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Modified register method response. Trying to add heroku.">
+      <created>1628167710201</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1628167710201</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Changed something in the composer file">
+      <created>1628168071652</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1628168071652</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Fixed an error with the primary key.">
+      <created>1628327264834</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1628327264834</updated>
+    </task>
+    <task id="LOCAL-00033" summary="updated getAllPlants">
+      <created>1628328006057</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1628328006057</updated>
+    </task>
+    <task id="LOCAL-00034" summary="The getAllPlants method now returns a list of all plants that are linked to the user, instead of every plant.">
+      <created>1628329905947</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1628329905947</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Removed unneeded {}.">
+      <created>1628333985521</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1628333985521</updated>
+    </task>
+    <task id="LOCAL-00036" summary="temp">
+      <created>1628420756643</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1628420756643</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fixed an error for heroku">
+      <created>1628420882826</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1628420882826</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Fixed error.">
+      <created>1628421271432</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1628421271432</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added a testuser with some plants.">
+      <created>1628422343433</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1628422343433</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Adding encryption to the testuser password, otherwise logging is doesn't work.">
+      <created>1628422540300</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1628422540300</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Added encryption to the seeded users, otherwise their passwords will not be useable.">
+      <created>1628422681234</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1628422681234</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Removed [] from findPlant.">
+      <created>1628513891947</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1628513891947</updated>
+    </task>
+    <task id="LOCAL-00043" summary="heroku commit">
+      <created>1628585737631</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1628585737631</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Re-enabled validation in PlantService.php.">
+      <created>1628596608775</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1628596608775</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Changed getAllRooms to return all rooms that are created by the current user.">
+      <created>1628601350092</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1628601350092</updated>
+    </task>
+    <task id="LOCAL-00046" summary="heroku commit">
+      <created>1628601468942</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1628601468942</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Fixed an error.">
+      <created>1628601551718</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1628601551718</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added some default rooms to the testuser.">
+      <created>1628602049788</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1628602049788</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Remove [] from user method.">
+      <created>1628754219260</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1628754219260</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Modified addPlant so a record is also added in the plantsUser table.">
+      <created>1628777057843</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1628777057844</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed multilingual implementation to use a queryString param in the api call rather then changing the entire url." />
+    <MESSAGE value="Fixed some errors." />
+    <MESSAGE value="Removed the validation on the plants as a quick solution due to errors" />
+    <MESSAGE value="Final commit." />
+    <MESSAGE value="Modified register method response. Trying to add heroku." />
+    <MESSAGE value="Changed something in the composer file" />
+    <MESSAGE value="Added migrations and seeders for a new table." />
+    <MESSAGE value="Fixed an error with the primary key." />
+    <MESSAGE value="updated getAllPlants" />
+    <MESSAGE value="The getAllPlants method now returns a list of all plants that are linked to the user, instead of every plant." />
+    <MESSAGE value="Removed unneeded {}." />
+    <MESSAGE value="temp" />
+    <MESSAGE value="Fixed an error for heroku" />
+    <MESSAGE value="Fixed error." />
+    <MESSAGE value="Added a testuser with some plants." />
+    <MESSAGE value="Adding encryption to the testuser password, otherwise logging is doesn't work." />
+    <MESSAGE value="Added encryption to the seeded users, otherwise their passwords will not be useable." />
+    <MESSAGE value="Removed [] from findPlant." />
+    <MESSAGE value="Re-enabled validation in PlantService.php." />
+    <MESSAGE value="Changed getAllRooms to return all rooms that are created by the current user." />
+    <MESSAGE value="heroku commit" />
+    <MESSAGE value="Fixed an error." />
+    <MESSAGE value="Added some default rooms to the testuser." />
+    <MESSAGE value="Remove [] from user method." />
+    <MESSAGE value="Modified addPlant so a record is also added in the plantsUser table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified addPlant so a record is also added in the plantsUser table." />
+  </component>
+</project>

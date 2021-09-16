@@ -1,0 +1,126 @@
+main {
+  height: 75vh;
+}
+
+body {
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 10vh;
+  margin-left: 5vh;
+  margin-top: 5vh;
+}
+
+h3 {
+  font-size: 4.5rem;
+}
+
+#plantList {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  border: solid #965D35 5px;
+  width: 80%;
+  height: 79%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+#plantList .plant {
+  display: flex;
+  margin: 30px;
+  border: white solid 5px;
+}
+#plantList .plant .plantInfo * {
+  margin-bottom: 1vh;
+}
+#plantList * {
+  padding: 10px;
+}
+#plantList span, #plantList a {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+#plantList .image img {
+  width: 65%;
+  margin-bottom: 30px;
+}
+#plantList .plantButtons {
+  background-color: darkgreen;
+  border: white 0.5rem dashed;
+  display: block;
+  text-align: center;
+}
+#plantList .plantButtons .offline {
+  background-color: darkred;
+}
+
+@media screen and (max-width: 1024px) {
+  main .deleteButton {
+    top: -19vh;
+    right: -10vh;
+  }
+  main .deletePopup {
+    height: 25%;
+  }
+}
+.deleteButton {
+  background-color: #965D35;
+  top: -33vh;
+  right: -18vh;
+  position: relative;
+  width: 3vh;
+  padding: 5px;
+  border: 1px saddlebrown solid;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.deletePopup {
+  position: absolute;
+  top: 25%;
+  height: 30%;
+  right: 25%;
+  left: 25%;
+  background-color: rgba(222, 184, 135, 0.8);
+}
+.deletePopup p {
+  font-size: 3rem;
+  margin-bottom: 5vh;
+}
+
+.addButton {
+  font-size: 5vh;
+  border: 1px saddlebrown solid;
+  background-color: #965D35;
+  text-decoration: none;
+  border-radius: 5vh;
+  margin-left: 75%;
+  margin-right: auto;
+  size: 10vh;
+}
+
+#refresh {
+  margin-left: 20%;
+}
+
+h1 + div {
+  margin-bottom: 5vh;
+}
+
+.popupFlex {
+  display: flex;
+  flex-flow: column;
+}
+.popupFlex .button {
+  align-self: flex-end;
+  margin-bottom: 5vh;
+}
+
+.offlinePopup {
+  background-color: darkred;
+  color: white;
+}
+
+/*# sourceMappingURL=home.css.map */
